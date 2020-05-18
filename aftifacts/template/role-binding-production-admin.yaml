@@ -1,0 +1,13 @@
+kind: RoleBinding
+apiVersion: rbac.authorization.k8s.io/v1beta1
+metadata:
+  name: production-admin-binding
+  namespace: production
+subjects:
+- kind: User
+  name: production-admin-user
+  apiGroup: ""
+roleRef:
+  kind: Role
+  name: production-admin
+  apiGroup: ""
